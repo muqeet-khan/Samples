@@ -1,0 +1,13 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Test1.Services
+@inject RequestDetailsService req
+@inject ServerDetailsService ser
+@{
+
+}
+This is being served by the controller - @ViewData["ControllerName"]
+<h2> Server - Singleton: @ser.GetDetail() </h2>
+
+<h2> Request - Scoped: @req.GetDetail() </h2>

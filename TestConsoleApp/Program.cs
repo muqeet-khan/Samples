@@ -15,16 +15,13 @@ namespace TestConsoleApp
                 return p.FirstName + " " + p.LastName;
             });
             p1.FirstName = "Foo";
-
             Func<Person, string> toStringMethod = p => p.FirstName?.ToString() + " " + p.LastName?.ToString();
 
             Person p2 = new Person(toStringMethod);
-
-            System.Console.WriteLine(p0.ToString());
-            System.Console.WriteLine(p1.ToString());
-            System.Console.WriteLine(p2.ToString());
-
-            System.Console.ReadLine();
+            Console.WriteLine(p0.ToString());
+            Console.WriteLine(p1.ToString());
+            Console.WriteLine(p2.ToString());
+            Console.ReadLine();
         }
     }
 }
