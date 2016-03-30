@@ -1,13 +1,27 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+        For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+    </div>*@
 @using Test1.Services
 @inject RequestDetailsService req
 @inject ServerDetailsService ser
 @{
 
 }
-This is being served by the controller - @ViewData["ControllerName"]
-<h2> Server - Singleton: @ser.GetDetail() </h2>
+<div class="row">
+    <span class="text-primary">This is being served by the controller - @ViewData["ControllerName"]</span>
+</div>
+    <h2> Server - Singleton: @ser.GetDetail() </h2>
 
-<h2> Request - Scoped: @req.GetDetail() </h2>
+    <h2> Request - Scoped: @req.GetDetail() </h2>
+
+
+<div class="row">
+    <p id="contactInfo">
+
+    </p>
+</div>
+
+@section scripts
+{
+<script src="~/js/site.js"></script>
+}

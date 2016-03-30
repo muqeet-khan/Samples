@@ -23,7 +23,9 @@ namespace Test1
         {
             app.UseGlenMiddleware();
 
-            app.UseIISPlatformHandler();
+            app.UseIISPlatformHandler(options => options.AuthenticationDescriptions.Clear());
+
+            app.UseStaticFiles();
 
             app.UseDeveloperExceptionPage();
 
